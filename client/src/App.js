@@ -1,14 +1,6 @@
 import { useEffect, useState } from 'react';
 const api_base = 'http://localhost:3002';
 
-// Create your forceUpdate hook
-function useForceUpdate() {
-  let [value, setState] = useState(true);
-  return () => setState(!value);
-}
-
-
-
 function App() {
   const [todos, setTodos] = useState([]);
   const [popupActive, setPopupActive] = useState(false);
@@ -17,8 +9,6 @@ function App() {
   useEffect(() => {
     GetTodos();
   }, []);
-
-  const handleForceupdateMethod = useForceUpdate();
 
 
   const GetTodos = () => {

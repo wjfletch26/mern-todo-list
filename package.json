@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "concurrently": "^7.6.0",
+    "gh-pages": "^5.0.0"
+  },
+  "scripts": {
+    "start": "node api/server.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm start\" \"npm run client\""
+  }
+}
