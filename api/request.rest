@@ -8,7 +8,7 @@ POST http://localhost:3002/todo/new
 Content-Type: application/json
 
 {
-"text": ""
+"text": " i want this to delete"
 }
 
 ###
@@ -20,10 +20,11 @@ DELETE http://localhost:3002/todo/delete/6414eb9967681490e932cbd6
 GET http://localhost:3002/todo/complete/6414eb8567681490e932cbd0
 
 
+### should replace 
 
-PUT http://localhost:3002/todo/update/64135f5822bd2101dd477b07 
+PUT http://localhost:3002/todo/update/6414eb8567681490e932cbd0 
 Content-Type: application/json
 
 {
-"text": ""
+"text": "how about this"
 }
