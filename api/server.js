@@ -16,7 +16,7 @@ app.use(cors());
 //     useUnifiedTopology: true
 // }).then(() => console.log("Connected to MongoDB")).catch(console.error);
 
-mongoose.connect('mongodb+srv://jay_squared:NalaDog2023!@mernclusterproject.h8eohwo.mongodb.net/?retryWrites=true&w=majority', {
+mongoose.connect('mongodb+srv://jaysquared744:NalaDog2023@cluster0.ujbk3yq.mongodb.net/?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }).then(() => console.log("Connected to MongoDB")).catch(console.error);
