@@ -59,7 +59,7 @@ function App() {
   }
   return (
     <div className="App">
-      <h1>Welcome, To Small Good Decisions</h1>
+      <h1>Welcome, To TODO Small Good Decisions </h1>
       <h4>Your To-Do's</h4>
 
       <div className="todos">

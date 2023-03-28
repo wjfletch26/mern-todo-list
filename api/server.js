@@ -2,6 +2,9 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const path = require("path");
+require('dotenv').config()
+
+
 
 const app = express();
 
@@ -12,7 +15,7 @@ app.use(
 app.use(cors());
 
 
-mongoose.connect('mongodb+srv://jaysquared:NalaDog2023@cluster0.cgl8xjv.mongodb.net/?retryWrites=true&w=majority', {
+mongoose.connect(process.env.MONGODB_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }).then(() => console.log("Connected to MongoDB")).catch(console.error);
