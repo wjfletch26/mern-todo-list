@@ -5,7 +5,7 @@
   },
   "homepage": "https://wjfletch26.github.io/mern-todo-list/",
   "scripts": {
-    "start": "node api/server.js",
+    "start": "npm install && node api/server.js",
     "predeploy": "npm run build --prefix client",
     "deploy": "gh-pages -b prod -d client/build",
     "build": "npm run build --prefix client",
