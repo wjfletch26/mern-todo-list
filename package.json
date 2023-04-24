@@ -7,7 +7,7 @@
   "scripts": {
     "start": "npm install && node api/server.js",
     "predeploy": "npm run build --prefix client",
-    "deploy": "gh-pages -b prod -d client/build",
+    "deploy": "gh-pages -b main -d build --prefix client",
     "build": "npm run build --prefix client",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm start\" \"npm run client\""
