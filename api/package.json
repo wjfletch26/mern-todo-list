@@ -10,7 +10,7 @@
     "path": "^0.12.7"
   },
   "scripts": {
-    "start": "nodemon server.js",
+    "start": "npm build && nodemon server.js",
     "build": "cd client && npm install && npm run build"
   },
   "author": "Josh Fletcher",
