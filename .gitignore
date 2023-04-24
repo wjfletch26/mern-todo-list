@@ -7,6 +7,9 @@ client/node_modules
 /.pnp
 .pnp.js
 
+pwd.png
+mongo_login.png
+
 # testing
 /coverage
 
