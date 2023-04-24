@@ -1,13 +1,5 @@
 import { useEffect, useState } from 'react';
-const api_base = 'http://localhost:3002';
-
-// Create your forceUpdate hook
-function useForceUpdate() {
-  let [value, setState] = useState(true);
-  return () => setState(!value);
-}
-
-
+const api_base = 'https://mern-todo-list-a0g8.onrender.com';
 
 function App() {
   const [todos, setTodos] = useState([]);
@@ -17,8 +9,6 @@ function App() {
   useEffect(() => {
     GetTodos();
   }, []);
-
-  const handleForceupdateMethod = useForceUpdate();
 
 
   const GetTodos = () => {
@@ -69,8 +59,8 @@ function App() {
   }
   return (
     <div className="App">
-      <h1>Welcome, Josh</h1>
-      <h4>Your tasks</h4>
+      <h1>Welcome, To TODO Small Good Decisions </h1>
+      <h4>Your To-Do's</h4>
 
       <div className="todos">
         {todos.length > 0 ? todos.map(todo => (
@@ -90,7 +80,7 @@ function App() {
 
           </div>
         )) : (
-          <p>You currently have no tasks</p>
+          <p>You currently have no tasks, go outside 🎉 </p>
         )}
       </div>
 

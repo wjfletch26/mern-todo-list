@@ -1,13 +1,21 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const path = require("path");
+require('dotenv').config()
+
+
 
 const app = express();
 
 app.use(express.json());
+app.use(
+    express.static(path.join(__dirname, "../client/build"))
+);
 app.use(cors());
 
-mongoose.connect('mongodb://127.0.0.1:27017/react-todo', {
+
+mongoose.connect(process.env.MONGODB_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }).then(() => console.log("Connected to MongoDB")).catch(console.error);
