@@ -2,7 +2,7 @@
   "name": "api",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.18.2",
@@ -11,8 +11,9 @@
     "dotenv": "^16.0.3"
   },
   "scripts": {
-    "start": "npm install && nodemon server.js",
-    "build": "cd client && npm install && npm run build"
+    "start": "npm install && node server.js",
+    "dev": "npm install && nodemon server.js",
+    "build": "npm i && cd ../client && npm i && npm run build"
   },
   "author": "Josh Fletcher",
   "license": "ISC",
