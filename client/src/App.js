@@ -10,6 +10,13 @@ function App() {
     GetTodos();
   }, []);
 
+  // Create your forceUpdate hook
+  function useForceUpdate() {
+    let [value, setState] = useState(true);
+    return () => setState(!value);
+  }
+
+  const handleForceupdateMethod = useForceUpdate();
 
   const GetTodos = () => {
     fetch(api_base + '/todos')
@@ -37,7 +44,7 @@ function App() {
 
 
     setTodos(todos => todos.filter(todo => todo._id !== data.result._id));
-    // handleForceupdateMethod();
+    handleForceupdateMethod();
   }
 
   //this is for the pop up to add new todos
