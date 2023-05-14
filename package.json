@@ -1,18 +1,25 @@
 {
   "devDependencies": {
-    "concurrently": "^7.6.0",
-    "gh-pages": "^5.0.0"
+    "concurrently": "^7.6.0"
   },
+  "main": "./api/server.js",
   "homepage": "https://wjfletch26.github.io/mern-todo-list/",
+  "engines": {
+    "node": "16.x"
+  },
   "scripts": {
-    "start": "npm install && node api/server.js",
-    "predeploy": "npm run build --prefix client",
-    "deploy": "gh-pages -b main -d client/build",
+    "start": "cd ./api && node server.js",
     "build": "npm run build --prefix client",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm start\" \"npm run client\""
   },
   "dependencies": {
-    "dotenv": "^16.0.3"
+    "dotenv": "^16.0.3",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mongoose": "^7.0.2",
+    "path": "^0.12.7",
+    "validator": "^13.7.0",
+    "jsonwebtoken": "^8.5.1"
   }
 }
